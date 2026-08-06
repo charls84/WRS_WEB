@@ -1,0 +1,388 @@
+@import "tailwindcss";
+
+/* Hide reCAPTCHA badge — privacy notice is shown inline under the form per Google ToS */
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+/* iOS Safari zooms the viewport when focusing form controls under 16px.
+   Force 16px on mobile to keep the page from jumping to ~110% zoom. */
+@media (max-width: 767px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+@theme {
+  --font-jakarta: var(--font-jakarta);
+}
+
+:root {
+  /* Brand */
+  --wrs-teal: #01A2B7;
+  --wrs-teal-on-light: #018293; /* Accessibility — teal on white/light bg */
+  --wrs-teal-on-dark: #16A5AF;  /* Accessibility — teal on black/dark bg */
+  --wrs-copper: #B46A3C;
+  --wrs-black: #001416;
+
+  /* Text colors (Figma tokens) */
+  --color-text-primary: #001416;
+  --color-text-secondary: #63737D;
+  --color-text-eyebrow: #018293;
+  --color-text-light: #FFFFFF;
+  --color-text-muted: #9CA9B0;
+
+  /* Neutral palette */
+  --color-neutral-200: #D0D6D9;
+  --color-neutral-300: #9CA9B0;
+  --color-neutral-400: #63737D;
+
+  /* Surfaces */
+  --color-surface-primary: #FFFFFF;
+  --color-surface-brand: #E6F4F5;
+
+  /* Structure */
+  --color-structure-base: #001416;
+  --color-structure-deep: #0F5C63;
+
+  /* Legacy aliases */
+  --gray-base: #D0D6D9;
+  --gray-strong: #B9C2C7;
+  --gray-stronger: #8897A0;
+  --gray-mid: #63737D;
+  --gray-muted: #9BA8AF;
+  --gray-weak: #F3F3F3;
+  --support-bg: #E6F4F5;
+  --primary-hover: #108992;
+  --structure-deep: #0F5C63;
+
+  /* ─────────────────────────────────────────────────────────────
+     Typography scale — Mobile (<768px) base
+     Values mirror Figma Style Guide tokens per breakpoint.
+     Expressed in rem (16px base) so user font-size preferences
+     are respected. Letter-spacing in em so it scales with size.
+     Breakpoint overrides live in the @media blocks below.
+     ───────────────────────────────────────────────────────────── */
+  --fs-h1: 2rem;                /* 32px */
+  --fs-h1-subtitle: 1.375rem;   /* 22px — scales with h3 at larger breakpoints */
+  --fs-h2: 1.75rem;             /* 28px */
+  --fs-h3: 1.375rem;            /* 22px */
+  --fs-h4: 1.125rem;            /* 18px */
+  --fs-body-large: 1.125rem;    /* 18px */
+  --fs-body: 1rem;              /* 16px */
+  --fs-body-small: 0.875rem;    /* 14px */
+  --fs-caption: 0.75rem;        /* 12px — held across breakpoints */
+  --fs-button-label: 1rem;      /* 16px — held across breakpoints */
+
+  --lh-heading: 1.3;
+  --lh-h4: 1.32;
+  --lh-body: 1.5;
+
+  --ls-h1: -0.01em;
+  --ls-h1-subtitle: -0.005em;
+  --ls-h2: -0.005em;
+  --ls-h3: -0.005em;
+  --ls-h4: 0;
+  --ls-button: 0.01em;
+
+  /* ─────────────────────────────────────────────────────────────
+     Layout / spacing tokens — mirror Figma semantic tokens
+     padding-site-margin:    16 / 40 / 120 (mobile/tablet/desktop)
+     padding-section:        64 / 64 /  80
+     heading-block-max:     358 / 664 / 790
+     form-max:              358 / 506 / 1044
+     gap-content-padding:    32 / 40 /  40
+     gap-container-padding:  24 / 32 /  40
+     ───────────────────────────────────────────────────────────── */
+  --section-py: 4rem;              /* 64px — padding-section */
+  --site-margin: 1rem;             /* 16px — padding-site-margin */
+  --heading-block-max: 358px;      /* heading-block-max-width */
+  --form-max: 358px;               /* form-max-width */
+  --gap-content: 2rem;             /* 32px — gap-content-padding */
+  --gap-container: 1.5rem;         /* 24px — gap-container-padding */
+  --gap-heading: 0.75rem;          /* 12px — padding-heading-block (h2 ↔ sub) */
+  --container-wide: 1600px;        /* outer wrapper max (reviews, gallery) */
+  --container-content: 1200px;     /* inner content column (benefits, services) */
+  --divider-color: #D0D6D9;        /* Figma "borders, dividers" swatch */
+
+  /* Sticky-nav heights — driven by data-sticky-stuck on <html>.
+     Read by SiteHeader (for top offset), JumpNav (for sticky top), and
+     [id] scroll-margin-top so anchor clicks land below the docked nav. */
+  --header-height: 65px;
+  --jumpnav-height: 56px;
+}
+
+/* Tablet: 768–1279px */
+@media (min-width: 768px) {
+  :root {
+    --fs-h1: 2.75rem;           /* 44px */
+    --fs-h1-subtitle: 1.5rem;   /* 24px */
+    --fs-h2: 2rem;              /* 32px */
+    --fs-h3: 1.5rem;            /* 24px */
+    --fs-h4: 1.25rem;           /* 20px */
+    --fs-body-large: 1.25rem;   /* 20px */
+    --fs-body: 1.125rem;        /* 18px */
+    --fs-body-small: 1rem;      /* 16px */
+
+    --site-margin: 2.5rem;      /* 40px */
+    --heading-block-max: 664px;
+    --form-max: 506px;
+    --gap-content: 2.5rem;      /* 40px */
+    --gap-container: 2rem;      /* 32px */
+    --gap-heading: 1rem;        /* 16px */
+
+    --header-height: 73px;
+    --jumpnav-height: 60px;
+  }
+}
+
+/* Desktop: 1280–1919px */
+@media (min-width: 1280px) {
+  :root {
+    --fs-h1: 3rem;              /* 48px */
+    --fs-h1-subtitle: 1.75rem;  /* 28px */
+    --fs-h2: 2.5rem;            /* 40px */
+    --fs-h3: 1.75rem;           /* 28px */
+    --fs-h4: 1.375rem;          /* 22px */
+    --fs-body-large: 1.375rem;  /* 22px */
+    --fs-body: 1.25rem;         /* 20px */
+
+    --section-py: 5rem;         /* 80px — Figma desktop padding-section */
+    --site-margin: 7.5rem;      /* 120px — Figma desktop padding-site-margin */
+    --heading-block-max: 790px;
+    --form-max: 1044px;
+    --gap-content: 2.5rem;      /* 40px — unchanged from tablet */
+    --gap-container: 2.5rem;    /* 40px */
+    --gap-heading: 1.5rem;      /* 24px */
+
+    --header-height: 101px;
+    --jumpnav-height: 64px;
+  }
+}
+
+/* Stuck-state overrides — toggled by data-sticky-stuck on <html> from JumpNav provider. */
+:root[data-sticky-stuck="true"] {
+  --header-height: 52px;
+  --jumpnav-height: 44px;
+}
+@media (min-width: 768px) {
+  :root[data-sticky-stuck="true"] {
+    --header-height: 56px;
+    --jumpnav-height: 48px;
+  }
+}
+@media (min-width: 1280px) {
+  :root[data-sticky-stuck="true"] {
+    --header-height: 72px;
+    --jumpnav-height: 52px;
+  }
+}
+
+/* XL Desktop: 1920px+ */
+@media (min-width: 1920px) {
+  :root {
+    --fs-h1: 4rem;              /* 64px */
+    --fs-h1-subtitle: 2rem;     /* 32px */
+    --fs-h2: 3rem;              /* 48px */
+    --fs-h3: 2rem;              /* 32px */
+    --fs-h4: 1.5rem;            /* 24px */
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-jakarta antialiased;
+    color: var(--wrs-black);
+    background-color: #FFFFFF;
+    /* Belt-and-suspenders: any horizontal overflow inside the page must not
+       turn the whole document into a horizontally scrollable area. Mobile
+       browsers anchor position:fixed to the layout viewport, so a horizontal
+       scroll there breaks the header. overflow-x:clip avoids creating a new
+       scroll container (unlike hidden) so position:sticky still works. */
+    overflow-x: clip;
+  }
+
+  /* Anchor offset for JumpNav links — keeps clicked section heading from
+     hiding under the docked header + JumpNav. */
+  main [id] {
+    scroll-margin-top: calc(var(--header-height) + var(--jumpnav-height) - 2px);
+  }
+
+  h1 {
+    font-size: var(--fs-h1);
+    font-weight: 800;
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-h1);
+  }
+
+  h2 {
+    font-size: var(--fs-h2);
+    font-weight: 800;
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-h2);
+  }
+
+  h3 {
+    font-size: var(--fs-h3);
+    font-weight: 800;
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-h3);
+  }
+
+  h4 {
+    font-size: var(--fs-h4);
+    font-weight: 800;
+    line-height: var(--lh-h4);
+    letter-spacing: var(--ls-h4);
+  }
+
+  /* ───── Typography utility classes ─────
+     Use these on any element to opt into a Figma type style
+     independent of the HTML heading level. */
+  .h1 {
+    font-size: var(--fs-h1);
+    font-weight: 800;
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-h1);
+  }
+
+  .h1-subtitle {
+    font-size: var(--fs-h1-subtitle);
+    font-weight: 800;
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-h1-subtitle);
+  }
+
+  .h2 {
+    font-size: var(--fs-h2);
+    font-weight: 800;
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-h2);
+  }
+
+  .h3 {
+    font-size: var(--fs-h3);
+    font-weight: 800;
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-h3);
+  }
+
+  .h4 {
+    font-size: var(--fs-h4);
+    font-weight: 800;
+    line-height: var(--lh-h4);
+    letter-spacing: var(--ls-h4);
+  }
+
+  .body-large {
+    font-size: var(--fs-body-large);
+    font-weight: 500;
+    line-height: var(--lh-body);
+    letter-spacing: 0;
+  }
+
+  .body-regular {
+    font-size: var(--fs-body);
+    font-weight: 500;
+    line-height: var(--lh-body);
+    letter-spacing: 0;
+  }
+
+  .body-small {
+    font-size: var(--fs-body-small);
+    font-weight: 500;
+    line-height: var(--lh-body);
+    letter-spacing: 0;
+  }
+
+  .caption {
+    font-size: var(--fs-caption);
+    font-weight: 500;
+    line-height: var(--lh-body);
+    letter-spacing: 0;
+  }
+
+  .caption-bold {
+    font-size: var(--fs-caption);
+    font-weight: 700;
+    line-height: var(--lh-body);
+    letter-spacing: 0;
+  }
+
+  .eyebrow {
+    font-size: var(--fs-body-large);
+    font-weight: 700;
+    line-height: var(--lh-body);
+    letter-spacing: 0;
+    color: var(--color-text-eyebrow);
+  }
+
+}
+
+/* AEO-friendly knowledge callout — pairs a <strong> lead label with body text. */
+.knowledge-callout {
+  border-left: 2px solid var(--divider-color);
+  padding: 0.25rem 0 0.25rem 1rem;
+}
+
+.knowledge-callout strong {
+  color: var(--color-text-eyebrow);
+  font-weight: 700;
+}
+
+@layer components {
+  .nav-shadow {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12),
+                0px 4px 32px 6px rgba(0, 0, 0, 0.08);
+  }
+
+  .btn-pill-primary {
+    @apply bg-[#001416] text-white font-bold rounded-full flex items-center justify-center text-center transition-all hover:bg-[#0a2e32];
+    padding: 12px 16px;
+    font-size: var(--fs-button-label);
+    line-height: var(--lh-body);
+    letter-spacing: var(--ls-button);
+  }
+
+  .btn-pill-secondary {
+    @apply bg-white text-[#001416] border border-[#018293] font-bold rounded-full flex items-center justify-center text-center transition-all hover:bg-[#f5fafa];
+    padding: 12px 16px;
+    font-size: var(--fs-button-label);
+    line-height: var(--lh-body);
+    letter-spacing: var(--ls-button);
+  }
+
+  .nav-phone-btn {
+    @apply border-2 border-[#16A5AF] text-[#16A5AF] font-bold rounded-full transition-all flex items-center justify-center;
+    padding: 8px 16px;
+    font-size: var(--fs-button-label);
+    line-height: var(--lh-body);
+  }
+}
+
+/* Hide horizontal scrollbar on the mobile JumpNav row. */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+/* Respect reduced-motion: instant transitions and snap, no smooth scroll. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .jumpnav,
+  .jumpnav a,
+  .site-header,
+  .site-header a {
+    transition: none !important;
+  }
+}

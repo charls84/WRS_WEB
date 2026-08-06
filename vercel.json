@@ -1,0 +1,11 @@
+{
+  "git": {
+    "deploymentEnabled": false
+  },
+  "crons": [
+    {
+      "path": "/api/reviews/refresh",
+      "schedule": "0 6 * * *"
+    }
+  ]
+}
