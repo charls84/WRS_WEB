@@ -16,6 +16,15 @@ const PROBLEM_ICONS = [
   "/icon-emergency.svg",
 ];
 
+// Same order as the home hero's TRUST_ICONS — index 3 (24/7 emergency) is skipped when rendering.
+const HERO_TRUST_ICONS = [
+  "/icon-reviews.svg",
+  "/icon-shield.svg",
+  "/icon-veteran.svg",
+  "/icon-emergency.svg",
+  "/icon-location.svg",
+];
+
 function servicesAnchor(locale: Locale, slug: string) {
   const base = locale === "en" ? "/" : `/${locale}`;
   return `${base}#${slug}`;
@@ -130,14 +139,27 @@ export function RoofRepairDeerfieldBeachContent({
                     {page.hero.headline}
                   </h1>
                   <p className="body-regular text-[#001416]">{page.hero.subCopy}</p>
-                  <div className="flex items-center gap-2">
-                    <div className="relative w-[18px] h-[18px] flex-shrink-0" aria-hidden="true">
-                      <Image src="/icon-shield.svg" alt="" fill className="object-contain" />
-                    </div>
-                    <p className="body-small text-[#001416]">
-                      <span className="font-[700]">{page.hero.trustLine}</span>
-                    </p>
-                  </div>
+                  {/* Trust signals — same list as home, minus 24/7 emergency response */}
+                  <ul aria-label="Business credentials" className="space-y-2 list-none p-0 m-0">
+                    {[0, 1, 2, 4].map((i) => {
+                      const item = t.hero.trust[i];
+                      const resolved = i === 0 ? pickByRating(reviewRating, item, t.hero.trustFirstGeneric) : item;
+                      const icon = HERO_TRUST_ICONS[i];
+                      return (
+                        <li key={i}>
+                          <div className="flex items-center gap-3">
+                            <div className="relative w-[18px] h-[18px] flex-shrink-0" aria-hidden="true">
+                              <Image src={icon} alt="" fill className="object-contain" />
+                            </div>
+                            <span className="body-small text-[#001416]">
+                              <span className="font-[700]">{formatWithCount(resolved.bold, reviewCount)}</span>
+                              <span className="font-[500]">{resolved.regular}</span>
+                            </span>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
                 </div>
 
                 {/* Single CTA — phone only (inspection CTA lives between Problems and Why-Us) */}
