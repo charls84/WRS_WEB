@@ -112,7 +112,9 @@ export function RoofRepairDeerfieldBeachContent({
                     <div className="relative w-[18px] h-[18px] flex-shrink-0" aria-hidden="true">
                       <Image src="/icon-shield.svg" alt="" fill className="object-contain" />
                     </div>
-                    <p className="caption-bold text-[#018293]">{page.hero.trustLine}</p>
+                    <p className="body-small text-[#001416]">
+                      <span className="font-[700]">{page.hero.trustLine}</span>
+                    </p>
                   </div>
                 </div>
 
