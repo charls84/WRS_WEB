@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Phone } from "lucide-react";
 import { BenefitPoint, SiteFooter, renderBold } from "@/components/PageSections";
 import { ContactForm, SiteHeader, FAQItem } from "@/components/PageSections.client";
-import { formatWithCount, pickByRating } from "@/lib/reviews";
 import type { Translations, Locale } from "@/i18n";
 
 const SITE_URL = "https://weatherrecoverysolutions.com";
@@ -109,18 +108,12 @@ export function RoofRepairDeerfieldBeachContent({
                     {page.hero.headline}
                   </h1>
                   <p className="body-regular text-[#001416]">{page.hero.subCopy}</p>
-                  <p className="caption-bold text-[#018293]">
-                    {formatWithCount(
-                      pickByRating(
-                        reviewRating,
-                        t.hero.trust[0].bold + t.hero.trust[0].regular,
-                        t.hero.trustFirstGeneric.bold + t.hero.trustFirstGeneric.regular,
-                      ),
-                      reviewCount,
-                    )}
-                    {" · "}
-                    {page.hero.trustLine}
-                  </p>
+                  <div className="flex items-center gap-2">
+                    <div className="relative w-[18px] h-[18px] flex-shrink-0" aria-hidden="true">
+                      <Image src="/icon-shield.svg" alt="" fill className="object-contain" />
+                    </div>
+                    <p className="caption-bold text-[#018293]">{page.hero.trustLine}</p>
+                  </div>
                 </div>
 
                 {/* Single CTA — phone only (inspection CTA lives between Problems and Why-Us) */}
