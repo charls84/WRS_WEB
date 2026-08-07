@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Phone } from "lucide-react";
 import { BenefitPoint, SiteFooter, renderBold } from "@/components/PageSections";
 import { ContactForm, SiteHeader, FAQItem } from "@/components/PageSections.client";
+import { formatWithCount, pickByRating } from "@/lib/reviews";
 import type { Translations, Locale } from "@/i18n";
 
 const SITE_URL = "https://weatherrecoverysolutions.com";
@@ -103,7 +104,28 @@ export function RoofRepairDeerfieldBeachContent({
             <div className="xl:order-1 xl:flex-1 xl:pl-[120px]">
               <div className="px-4 pt-8 pb-12 md:px-6 md:py-[var(--section-py)] space-y-8 md:max-w-[1200px] md:mx-auto xl:mx-0 xl:max-w-none xl:px-0 xl:py-0">
                 <div className="space-y-3">
-                  <p className="eyebrow text-[#018293]">{page.hero.eyebrow}</p>
+                  {/* Google ratings — same as home hero */}
+                  <div
+                    className="flex items-center gap-2"
+                    aria-label={formatWithCount(
+                      pickByRating(reviewRating, t.hero.socialProofAria, t.hero.socialProofAriaGeneric),
+                      reviewCount,
+                    )}
+                  >
+                    <div className="relative w-[14px] h-[14px]">
+                      <Image src="/google-g.svg" alt="Google" fill className="object-contain" />
+                    </div>
+                    <div className="flex gap-[2px]" role="img" aria-label="5 out of 5 stars">
+                      {[...Array(5)].map((_, i) => (
+                        <div key={i} className="relative w-[15px] h-[15px]">
+                          <Image src="/google-star.svg" alt="" fill className="object-contain" />
+                        </div>
+                      ))}
+                    </div>
+                    <span className="text-[12px] md:text-[14px] font-[500] text-[#001416]">
+                      {formatWithCount(pickByRating(reviewRating, t.hero.socialProof, t.hero.socialProofGeneric), reviewCount)}
+                    </span>
+                  </div>
                   <h1 id="hero-heading" className="text-[#001416]">
                     {page.hero.headline}
                   </h1>
