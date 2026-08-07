@@ -752,7 +752,7 @@ export const en = {
         "Get a clear inspection, photos of what we find, and an honest recommendation—without pressure to replace more than your roof actually needs.",
       trustLine: "Licensed FL #CCC1328244 · Fully Insured · Veteran-Owned",
       imageAlt:
-        "Weather Recovery Solutions performing a precision tile roof repair in Deerfield Beach, Florida.",
+        "Close-up of a Weather Recovery Solutions roofer inspecting a cracked clay tile before repair in Deerfield Beach, Florida.",
       ctaPrimary: "Call (954) 999-6600",
       ctaPrimaryNote: "Speak directly with a local roofing expert—no call centers.",
       ctaSecondary: "Request a Roof Inspection",

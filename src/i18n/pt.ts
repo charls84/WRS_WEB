@@ -754,7 +754,7 @@ export const pt: Translations = {
         "Receba uma inspe\u00e7\u00e3o clara, fotos do que encontramos e uma recomenda\u00e7\u00e3o honesta\u2014sem press\u00e3o para substituir mais do que seu telhado realmente precisa.",
       trustLine: "Licenciados na FL #CCC1328244 \u00b7 Totalmente Segurados \u00b7 Veteranos",
       imageAlt:
-        "Weather Recovery Solutions realizando um reparo de precis\u00e3o em telhado de telhas em Deerfield Beach, Florida.",
+        "Close-up de um t\u00e9cnico da Weather Recovery Solutions inspecionando uma telha de barro trincada antes do reparo em Deerfield Beach, Florida.",
       ctaPrimary: "Ligue (954) 999-6600",
       ctaPrimaryNote: "Fale diretamente com um especialista local em telhados\u2014sem centrais de atendimento.",
       ctaSecondary: "Solicitar uma Inspe\u00e7\u00e3o de Telhado",

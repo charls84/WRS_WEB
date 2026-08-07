@@ -755,7 +755,7 @@ export const es: Translations = {
         "Reciba una inspecci\u00f3n clara, fotos de lo que encontramos y una recomendaci\u00f3n honesta\u2014sin presi\u00f3n para reemplazar m\u00e1s de lo que su techo realmente necesita.",
       trustLine: "Licenciados en FL #CCC1328244 \u00b7 Totalmente Asegurados \u00b7 Veteranos",
       imageAlt:
-        "Weather Recovery Solutions realizando una reparaci\u00f3n de precisi\u00f3n de techo de tejas en Deerfield Beach, Florida.",
+        "Primer plano de un techador de Weather Recovery Solutions inspeccionando una teja de barro agrietada antes de repararla en Deerfield Beach, Florida.",
       ctaPrimary: "Llame al (954) 999-6600",
       ctaPrimaryNote: "Hable directamente con un experto local en techos\u2014sin centros de llamadas.",
       ctaSecondary: "Solicitar una Inspecci\u00f3n de Techo",

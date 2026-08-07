@@ -81,7 +81,7 @@ export function RoofRepairDeerfieldBeachContent({
             {/* Real repair photo — no carousel, no stock imagery */}
             <figure className="relative aspect-[4/3] md:aspect-video xl:aspect-square w-full xl:order-2 xl:flex-1 overflow-hidden bg-[#D0D6D9] m-0">
               <Image
-                src="/images/services/m-the-roads-tile-roof-repair-1.webp"
+                src="/images/services/roof-tile-crack-inspection-1.webp"
                 alt={page.hero.imageAlt}
                 fill
                 sizes="(min-width: 1280px) 0px, 100vw"
@@ -90,7 +90,7 @@ export function RoofRepairDeerfieldBeachContent({
                 fetchPriority="high"
               />
               <Image
-                src="/images/services/d-the-roads-tile-roof-repair-1.webp"
+                src="/images/services/roof-tile-crack-inspection-1.webp"
                 alt={page.hero.imageAlt}
                 fill
                 sizes="(min-width: 1280px) 50vw, 0px"
