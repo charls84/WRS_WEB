@@ -852,7 +852,8 @@ export const pt: Translations = {
       ctaFreeInspection: "inspe\u00e7\u00e3o gratuita online.",
     },
     finalCta: {
-      heading: "Obtenha o Reparo Certo\u2014N\u00e3o uma Recomenda\u00e7\u00e3o Apressada",
+      heading: "Obtenha o Reparo Certo\u2014",
+      headingLine2: "N\u00e3o uma Recomenda\u00e7\u00e3o Apressada",
       body:
         "Comece com uma inspe\u00e7\u00e3o clara, fotos do dano e um or\u00e7amento por escrito de uma equipe de telhados local licenciada.",
       callButton: "Ligue (954) 999-6600",

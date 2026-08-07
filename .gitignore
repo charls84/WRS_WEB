@@ -53,3 +53,6 @@ next-env.d.ts
 /*.webp
 /fix_svgs.py
 /update_site.py
+
+# Local Netlify folder
+.netlify

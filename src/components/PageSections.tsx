@@ -220,10 +220,12 @@ export function BenefitPoint({
   index,
   title,
   body,
+  icon = "/icon-checkmark-circle.svg",
 }: {
   index: number;
   title: string;
   body: { text: string; bold?: boolean }[];
+  icon?: string;
 }) {
   const titleId = `benefit-${index}-title`;
   return (
@@ -233,7 +235,7 @@ export function BenefitPoint({
     >
       <div className="flex flex-col gap-3 flex-1">
         <div className="w-[34px] h-[34px]" aria-hidden="true">
-          <Image src="/icon-checkmark-circle.svg" alt="" width={34} height={34} />
+          <Image src={icon} alt="" width={34} height={34} />
         </div>
         <h3
           id={titleId}

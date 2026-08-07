@@ -2,9 +2,19 @@ import Image from "next/image";
 import { Phone } from "lucide-react";
 import { BenefitPoint, SiteFooter, renderBold } from "@/components/PageSections";
 import { ContactForm, SiteHeader, FAQItem } from "@/components/PageSections.client";
+import { formatWithCount, pickByRating } from "@/lib/reviews";
 import type { Translations, Locale } from "@/i18n";
 
 const SITE_URL = "https://weatherrecoverysolutions.com";
+
+const PROBLEM_ICONS = [
+  "/icon-waterdrop.svg",
+  "/icon-shingle.svg",
+  "/icon-tile.svg",
+  "/icon-vent.svg",
+  "/icon-storm.svg",
+  "/icon-emergency.svg",
+];
 
 function servicesAnchor(locale: Locale, slug: string) {
   const base = locale === "en" ? "/" : `/${locale}`;
@@ -99,11 +109,22 @@ export function RoofRepairDeerfieldBeachContent({
                     {page.hero.headline}
                   </h1>
                   <p className="body-regular text-[#001416]">{page.hero.subCopy}</p>
-                  <p className="caption-bold text-[#018293]">{page.hero.trustLine}</p>
+                  <p className="caption-bold text-[#018293]">
+                    {formatWithCount(
+                      pickByRating(
+                        reviewRating,
+                        t.hero.trust[0].bold + t.hero.trust[0].regular,
+                        t.hero.trustFirstGeneric.bold + t.hero.trustFirstGeneric.regular,
+                      ),
+                      reviewCount,
+                    )}
+                    {" · "}
+                    {page.hero.trustLine}
+                  </p>
                 </div>
 
-                {/* CTAs — phone dominant, form secondary */}
-                <div aria-label="Schedule a roof inspection" className="w-full space-y-4">
+                {/* Single CTA — phone only (inspection CTA lives between Problems and Why-Us) */}
+                <div aria-label="Schedule a roof inspection" className="w-full">
                   <div className="flex flex-col gap-2 items-center md:items-start md:max-w-[400px]">
                     <a
                       href="tel:9549996600"
@@ -117,16 +138,6 @@ export function RoofRepairDeerfieldBeachContent({
                     <p className="caption-bold text-[#001416] text-center md:text-left px-8 md:px-0">
                       {page.hero.ctaPrimaryNote}
                     </p>
-                  </div>
-                  <div className="flex flex-col gap-2 items-center md:items-start w-full md:max-w-[400px]">
-                    <a
-                      href="#inspection-form"
-                      data-track-location="hero"
-                      data-track-label="Request a Roof Inspection"
-                      className="btn-pill-secondary w-full"
-                    >
-                      {page.hero.ctaSecondary}
-                    </a>
                   </div>
                 </div>
               </div>
@@ -150,10 +161,32 @@ export function RoofRepairDeerfieldBeachContent({
 
             <div className="grid gap-4 xl:grid-cols-2 xl:gap-6">
               {page.problems.items.map((item, i) => (
-                <BenefitPoint key={i} index={i + 1} title={item.title} body={[{ text: item.body }]} />
+                <BenefitPoint
+                  key={i}
+                  index={i + 1}
+                  title={item.title}
+                  body={[{ text: item.body }]}
+                  icon={PROBLEM_ICONS[i]}
+                />
               ))}
             </div>
           </div>
+        </section>
+
+        {/* ─── INSPECTION CTA (between Problems and Why-Us) ─── */}
+        <section
+          id="inspection-cta"
+          aria-label="Request a roof inspection"
+          className="bg-white pb-[var(--section-py)] px-[var(--site-margin)] flex justify-center"
+        >
+          <a
+            href="#inspection-form"
+            data-track-location="roof-problems"
+            data-track-label="Request a Roof Inspection"
+            className="btn-pill-primary w-full max-w-[400px] text-center"
+          >
+            {page.hero.ctaSecondary}
+          </a>
         </section>
 
         {/* ─── SECTION 3: WHY WRS + PROOF ─── */}
@@ -334,6 +367,8 @@ export function RoofRepairDeerfieldBeachContent({
 
             <h2 id="final-cta-heading" className="h2 text-[#E6F4F5] text-center">
               {page.finalCta.heading}
+              <br />
+              {page.finalCta.headingLine2}
             </h2>
 
             <p className="body-regular text-[#E6F4F5] text-center">{page.finalCta.body}</p>

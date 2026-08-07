@@ -850,7 +850,8 @@ export const en = {
       ctaFreeInspection: "free inspection online.",
     },
     finalCta: {
-      heading: "Get the Right Repair—Not a Rushed Recommendation",
+      heading: "Get the Right Repair—",
+      headingLine2: "Not a Rushed Recommendation",
       body:
         "Start with a clear inspection, photos of the damage, and a written estimate from a licensed local roofing team.",
       callButton: "Call (954) 999-6600",

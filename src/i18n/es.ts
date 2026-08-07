@@ -853,7 +853,8 @@ export const es: Translations = {
       ctaFreeInspection: "inspecci\u00f3n gratuita en l\u00ednea.",
     },
     finalCta: {
-      heading: "Obtenga la Reparaci\u00f3n Correcta\u2014No una Recomendaci\u00f3n Apresurada",
+      heading: "Obtenga la Reparaci\u00f3n Correcta\u2014",
+      headingLine2: "No una Recomendaci\u00f3n Apresurada",
       body:
         "Comience con una inspecci\u00f3n clara, fotos del da\u00f1o y un estimado por escrito de un equipo de techado local licenciado.",
       callButton: "Llame al (954) 999-6600",
