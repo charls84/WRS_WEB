@@ -184,28 +184,83 @@ export function RoofRepairDeerfieldBeachContent({
           </a>
         </section>
 
-        {/* ─── SECTION 3: WHY WRS + PROOF ─── */}
+        {/* ─── SECTION 3: WHY WRS + PROOF (full-section looping video background) ─── */}
         <section
           id="why-wrs"
           aria-labelledby="why-wrs-heading"
-          className="bg-[#E6F4F5] py-[var(--section-py)] px-[var(--site-margin)]"
+          className="relative overflow-hidden py-[var(--section-py)] px-[var(--site-margin)]"
         >
-          <div className="space-y-8 xl:max-w-[var(--container-wide)] xl:mx-auto xl:flex xl:gap-10 xl:items-start xl:space-y-0">
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            src="/videos/why-us-proof-bg.mp4"
+            poster="/images/process/d-sam-mike-process-1.webp"
+            aria-hidden="true"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+          {/* Slight blur on the video directly behind the text */}
+          <div className="absolute inset-0 backdrop-blur-[2px]" aria-hidden="true" />
+          {/* 70% opaque dark layer between the video and the text */}
+          <div className="absolute inset-0 bg-[#001416] opacity-70" aria-hidden="true" />
+
+          <div className="relative z-10 space-y-8 xl:max-w-[var(--container-wide)] xl:mx-auto xl:flex xl:gap-10 xl:items-center xl:space-y-0">
             <div className="space-y-6 xl:flex-1 xl:min-w-0">
               <header className="space-y-[var(--gap-heading)]">
-                <h2 id="why-wrs-heading" className="h2 text-[#001416]">
+                <h2
+                  id="why-wrs-heading"
+                  className="h2 text-[#F3F3F3]"
+                  style={{ textShadow: "0 1px 4px rgba(0,0,0,0.7)" }}
+                >
                   {page.whyUs.heading}
                 </h2>
-                <p className="body-regular text-[#001416]">{page.whyUs.body}</p>
+                <p
+                  className="body-regular text-[#F3F3F3]"
+                  style={{ textShadow: "0 1px 3px rgba(0,0,0,0.7)" }}
+                >
+                  {page.whyUs.body}
+                </p>
               </header>
 
               <div className="space-y-4">
-                {page.whyUs.points.map((point, i) => (
-                  <BenefitPoint key={i} index={i + 1} title={point.title} body={point.body} />
-                ))}
+                {page.whyUs.points.map((point, i) => {
+                  const titleId = `why-us-point-${i}-title`;
+                  return (
+                    <section
+                      key={i}
+                      aria-labelledby={titleId}
+                      className="bg-white/10 backdrop-blur-sm flex items-start gap-3 px-4 py-6 xl:p-6 rounded-[8px]"
+                    >
+                      <div className="w-[34px] h-[34px] flex-shrink-0" aria-hidden="true">
+                        <Image src="/icon-checkmark-circle-light.svg" alt="" width={34} height={34} />
+                      </div>
+                      <div className="flex flex-col gap-2">
+                        <h3
+                          id={titleId}
+                          className="h3 text-[#F3F3F3]"
+                          style={{ textShadow: "0 1px 3px rgba(0,0,0,0.7)" }}
+                        >
+                          {point.title}
+                        </h3>
+                        <p
+                          className="body-regular text-[#F3F3F3]"
+                          style={{ textShadow: "0 1px 3px rgba(0,0,0,0.7)" }}
+                        >
+                          {point.body.map((segment, j) => (
+                            <span key={j}>{segment.text}</span>
+                          ))}
+                        </p>
+                      </div>
+                    </section>
+                  );
+                })}
               </div>
 
-              <p className="body-regular font-[700] text-[#001416]">
+              <p
+                className="body-regular font-[700] text-[#F3F3F3]"
+                style={{ textShadow: "0 1px 3px rgba(0,0,0,0.7)" }}
+              >
                 {renderBold(page.whyUs.localTeamStatement)}
               </p>
 
@@ -213,50 +268,33 @@ export function RoofRepairDeerfieldBeachContent({
                 href="#inspection-form"
                 data-track-location="why-wrs"
                 data-track-label="Request My Roof Inspection"
-                className="btn-pill-primary w-full block text-center md:w-auto md:inline-block"
+                className="btn-pill-secondary w-full block text-center md:w-auto md:inline-block"
               >
                 {page.whyUs.ctaLabel}
               </a>
             </div>
 
-            {/* Proof: looping background video + verified review overlaid on top */}
-            <div className="relative aspect-[4/3] w-full rounded-[16px] overflow-hidden bg-[#D0D6D9] xl:aspect-[4/5] xl:rounded-[8px] xl:flex-1 xl:min-w-0 xl:max-w-[480px]">
-              <video
-                className="absolute inset-0 w-full h-full object-cover"
-                src="/videos/why-us-proof-bg.mp4"
-                poster="/images/process/d-sam-mike-process-1.webp"
+            {/* Proof: verified review, overlaid directly on the section's video background */}
+            <div className="space-y-3 xl:flex-1 xl:min-w-0 xl:max-w-[480px]">
+              <div
                 aria-hidden="true"
-                autoPlay
-                loop
-                muted
-                playsInline
-              />
-              {/* Slight blur on the video directly behind the text block */}
-              <div className="absolute inset-0 backdrop-blur-[2px]" aria-hidden="true" />
-              {/* 70% opaque dark layer between the video and the text */}
-              <div className="absolute inset-0 bg-[#001416] opacity-70" aria-hidden="true" />
-
-              <figure className="relative z-10 h-full flex flex-col justify-end gap-3 p-6 m-0">
-                <div
-                  aria-hidden="true"
-                  className="body-regular font-bold text-[#FBBC04]"
-                  style={{ textShadow: "0 1px 4px rgba(0,0,0,0.7)" }}
-                >
-                  ★★★★★
-                </div>
-                <blockquote
-                  className="body-regular text-[#F3F3F3] m-0"
-                  style={{ textShadow: "0 1px 4px rgba(0,0,0,0.7)" }}
-                >
-                  {proofReview.text}
-                </blockquote>
-                <figcaption
-                  className="body-small text-[#F3F3F3]"
-                  style={{ textShadow: "0 1px 3px rgba(0,0,0,0.7)" }}
-                >
-                  — {proofReview.authorName}, {proofReview.authorLocation} · Google Review
-                </figcaption>
-              </figure>
+                className="body-regular font-bold text-[#FBBC04]"
+                style={{ textShadow: "0 1px 4px rgba(0,0,0,0.7)" }}
+              >
+                ★★★★★
+              </div>
+              <blockquote
+                className="body-regular text-[#F3F3F3] m-0"
+                style={{ textShadow: "0 1px 4px rgba(0,0,0,0.7)" }}
+              >
+                {proofReview.text}
+              </blockquote>
+              <figcaption
+                className="body-small text-[#F3F3F3]"
+                style={{ textShadow: "0 1px 3px rgba(0,0,0,0.7)" }}
+              >
+                — {proofReview.authorName}, {proofReview.authorLocation} · Google Review
+              </figcaption>
             </div>
           </div>
         </section>
