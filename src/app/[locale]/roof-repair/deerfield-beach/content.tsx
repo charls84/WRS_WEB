@@ -89,7 +89,7 @@ export function RoofRepairDeerfieldBeachContent({
         >
           <div className="xl:flex xl:items-center xl:gap-6 xl:max-w-[1920px] xl:mx-auto">
             {/* Real repair photo — no carousel, no stock imagery */}
-            <figure className="relative aspect-[4/3] md:aspect-video xl:aspect-square w-full xl:order-2 xl:flex-1 overflow-hidden bg-[#D0D6D9] m-0">
+            <figure className="relative aspect-[3/2] md:aspect-video xl:aspect-square w-full xl:order-2 xl:flex-1 overflow-hidden bg-[#D0D6D9] m-0">
               <Image
                 src="/images/services/roof-tile-crack-inspection-1.webp"
                 alt={page.hero.imageAlt}
@@ -111,7 +111,7 @@ export function RoofRepairDeerfieldBeachContent({
             </figure>
 
             <div className="xl:order-1 xl:flex-1 xl:pl-[120px]">
-              <div className="px-4 pt-8 pb-12 md:px-6 md:py-[var(--section-py)] space-y-8 md:max-w-[1200px] md:mx-auto xl:mx-0 xl:max-w-none xl:px-0 xl:py-0">
+              <div className="px-4 pt-8 pb-16 md:px-6 md:py-[var(--section-py)] space-y-8 md:max-w-[1200px] md:mx-auto xl:mx-0 xl:max-w-none xl:px-0 xl:py-0">
                 <div className="space-y-3">
                   {/* Google ratings — same as home hero */}
                   <div
@@ -138,27 +138,9 @@ export function RoofRepairDeerfieldBeachContent({
                   <h1 id="hero-heading" className="text-[#001416]">
                     {page.hero.headline}
                   </h1>
-                  <p className="body-regular text-[#001416]">{page.hero.subCopy}</p>
-                  {/* Trust signals — same list as home, minus reviews (shown above via Google rating) and 24/7 emergency response */}
-                  <ul aria-label="Business credentials" className="space-y-2 list-none p-0 m-0">
-                    {[1, 2, 4].map((i) => {
-                      const resolved = t.hero.trust[i];
-                      const icon = HERO_TRUST_ICONS[i];
-                      return (
-                        <li key={i}>
-                          <div className="flex items-center gap-3">
-                            <div className="relative w-[18px] h-[18px] flex-shrink-0" aria-hidden="true">
-                              <Image src={icon} alt="" fill className="object-contain" />
-                            </div>
-                            <span className="body-small text-[#001416]">
-                              <span className="font-[700]">{formatWithCount(resolved.bold, reviewCount)}</span>
-                              <span className="font-[500]">{resolved.regular}</span>
-                            </span>
-                          </div>
-                        </li>
-                      );
-                    })}
-                  </ul>
+                  <p data-speakable="hero-sub" className="body-regular text-[#001416]">
+                    {page.hero.subCopy}
+                  </p>
                 </div>
 
                 {/* Single CTA — phone only (inspection CTA lives between Problems and Why-Us) */}
@@ -178,6 +160,27 @@ export function RoofRepairDeerfieldBeachContent({
                     </p>
                   </div>
                 </div>
+
+                {/* Trust signals — same list as home, minus reviews (shown above via Google rating) and 24/7 emergency response */}
+                <ul aria-label="Business credentials" className="space-y-2 list-none p-0 m-0">
+                  {[1, 2, 4].map((i) => {
+                    const resolved = t.hero.trust[i];
+                    const icon = HERO_TRUST_ICONS[i];
+                    return (
+                      <li key={i}>
+                        <div className="flex items-center gap-3">
+                          <div className="relative w-[18px] h-[18px] flex-shrink-0" aria-hidden="true">
+                            <Image src={icon} alt="" fill className="object-contain" />
+                          </div>
+                          <span className="body-small text-[#001416]">
+                            <span className="font-[700]">{formatWithCount(resolved.bold, reviewCount)}</span>
+                            <span className="font-[500]">{resolved.regular}</span>
+                          </span>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
             </div>
           </div>
