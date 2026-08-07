@@ -219,33 +219,41 @@ export function RoofRepairDeerfieldBeachContent({
               </a>
             </div>
 
-            {/* Proof: real project photo + verified review */}
-            <div className="space-y-4 xl:flex-1 xl:min-w-0 xl:max-w-[480px]">
-              <div className="relative aspect-[4/3] w-full rounded-[16px] overflow-hidden bg-[#D0D6D9] xl:aspect-[4/5] xl:rounded-[8px]">
-                <Image
-                  src="/images/process/m-sam-mike-process-1.webp"
-                  alt={page.whyUs.proofImageAlt}
-                  fill
-                  sizes="(min-width: 1280px) 0px, 100vw"
-                  className="object-cover xl:hidden"
-                />
-                <Image
-                  src="/images/process/d-sam-mike-process-1.webp"
-                  alt={page.whyUs.proofImageAlt}
-                  fill
-                  sizes="(min-width: 1280px) 40vw, 0px"
-                  className="object-cover hidden xl:block"
-                />
-              </div>
+            {/* Proof: looping background video + verified review overlaid on top */}
+            <div className="relative aspect-[4/3] w-full rounded-[16px] overflow-hidden bg-[#D0D6D9] xl:aspect-[4/5] xl:rounded-[8px] xl:flex-1 xl:min-w-0 xl:max-w-[480px]">
+              <video
+                className="absolute inset-0 w-full h-full object-cover"
+                src="/videos/why-us-proof-bg.mp4"
+                poster="/images/process/d-sam-mike-process-1.webp"
+                aria-hidden="true"
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
+              {/* Slight blur on the video directly behind the text block */}
+              <div className="absolute inset-0 backdrop-blur-[2px]" aria-hidden="true" />
+              {/* 70% opaque dark layer between the video and the text */}
+              <div className="absolute inset-0 bg-[#001416] opacity-70" aria-hidden="true" />
 
-              <figure className="bg-white rounded-[8px] p-6 space-y-3 m-0">
-                <div aria-hidden="true" className="body-regular font-bold text-[#FBBC04]">
+              <figure className="relative z-10 h-full flex flex-col justify-end gap-3 p-6 m-0">
+                <div
+                  aria-hidden="true"
+                  className="body-regular font-bold text-[#FBBC04]"
+                  style={{ textShadow: "0 1px 4px rgba(0,0,0,0.7)" }}
+                >
                   ★★★★★
                 </div>
-                <blockquote className="body-regular text-[#001416] m-0">
+                <blockquote
+                  className="body-regular text-[#F3F3F3] m-0"
+                  style={{ textShadow: "0 1px 4px rgba(0,0,0,0.7)" }}
+                >
                   {proofReview.text}
                 </blockquote>
-                <figcaption className="body-small text-[#63737D]">
+                <figcaption
+                  className="body-small text-[#F3F3F3]"
+                  style={{ textShadow: "0 1px 3px rgba(0,0,0,0.7)" }}
+                >
                   — {proofReview.authorName}, {proofReview.authorLocation} · Google Review
                 </figcaption>
               </figure>
@@ -355,17 +363,17 @@ export function RoofRepairDeerfieldBeachContent({
           aria-labelledby="final-cta-heading"
           className="bg-[#001416] py-[var(--section-py)] px-[var(--site-margin)] flex flex-col items-center"
         >
-          <div className="max-w-[358px] w-full flex flex-col items-center gap-6">
+          <div className="w-full flex flex-col items-center gap-6">
             <div className="flex justify-center" aria-hidden="true">
               <Image src="/graphic-inspection.svg" alt="" width={73} height={86} />
             </div>
 
-            <h2 id="final-cta-heading" className="h2 text-[#E6F4F5] text-center">
+            <h2 id="final-cta-heading" className="h2 text-[#E6F4F5] text-center max-w-[600px] text-balance">
               {page.finalCta.heading}
-              <br />
               {page.finalCta.headingLine2}
             </h2>
 
+            <div className="max-w-[358px] w-full flex flex-col items-center gap-6">
             <p className="body-regular text-[#E6F4F5] text-center">{page.finalCta.body}</p>
 
             <div className="w-full space-y-2">
@@ -388,6 +396,7 @@ export function RoofRepairDeerfieldBeachContent({
                 </a>
                 <p className="caption-bold text-[#63737D] text-center px-8">{page.finalCta.note}</p>
               </div>
+            </div>
             </div>
           </div>
         </section>
