@@ -740,4 +740,131 @@ export const es: Translations = {
       addressLine2: "Deerfield Beach, FL 33441",
     },
   },
+
+  /* \u2500\u2500\u2500 REPARACI\u00d3N DE TECHOS \u2014 DEERFIELD BEACH (landing de servicio+ciudad) \u2500\u2500\u2500 */
+  roofRepairDeerfieldBeach: {
+    meta: {
+      title: "Reparaci\u00f3n de Techos en Deerfield Beach, FL | Weather Recovery Solutions",
+      description:
+        "Reparaci\u00f3n de techos local en Deerfield Beach. Reciba una inspecci\u00f3n clara, fotos del da\u00f1o y una recomendaci\u00f3n honesta por escrito\u2014sin presi\u00f3n para reemplazar m\u00e1s de lo necesario.",
+    },
+    hero: {
+      eyebrow: "Reparaci\u00f3n de Techos Local en Deerfield Beach",
+      headline: "Reparaci\u00f3n de Techos Sin Suposiciones",
+      subCopy:
+        "Reciba una inspecci\u00f3n clara, fotos de lo que encontramos y una recomendaci\u00f3n honesta\u2014sin presi\u00f3n para reemplazar m\u00e1s de lo que su techo realmente necesita.",
+      trustLine: "Licenciados en FL #CCC1328244 \u00b7 Totalmente Asegurados \u00b7 Veteranos",
+      imageAlt:
+        "Weather Recovery Solutions realizando una reparaci\u00f3n de precisi\u00f3n de techo de tejas en Deerfield Beach, Florida.",
+      ctaPrimary: "Llame al (954) 999-6600",
+      ctaPrimaryNote: "Hable directamente con un experto local en techos\u2014sin centros de llamadas.",
+      ctaSecondary: "Solicitar una Inspecci\u00f3n de Techo",
+    },
+    problems: {
+      heading: "Obtenga la soluci\u00f3n correcta para el problema que est\u00e1 viendo",
+      subheading:
+        "Localizamos el origen del da\u00f1o, le mostramos lo que encontramos y recomendamos la reparaci\u00f3n que su techo realmente necesita.",
+      items: [
+        {
+          title: "Filtraciones e Intrusi\u00f3n de Agua",
+          body: "Encontramos el origen de la filtraci\u00f3n\u2014no solo d\u00f3nde se hizo visible el agua.",
+        },
+        {
+          title: "Tejas o L\u00e1minas Faltantes o Da\u00f1adas",
+          body: "Reparamos los materiales da\u00f1ados antes de que el viento y la lluvia agranden la abertura.",
+        },
+        {
+          title: "Tejas de Techo Agrietadas o Desplazadas",
+          body: "Reparamos tejas da\u00f1adas o desplazadas antes de que la pr\u00f3xima tormenta empeore el problema.",
+        },
+        {
+          title: "Problemas de Tapajuntas y Ventilaci\u00f3n",
+          body: "Atendemos los puntos de entrada comunes alrededor de uniones, ventilaciones y penetraciones del techo.",
+        },
+        {
+          title: "Da\u00f1os por Tormenta y Viento",
+          body: "Entienda qu\u00e9 se da\u00f1\u00f3 y reciba fotos de lo que encontramos.",
+        },
+        {
+          title: "Cobertura de Emergencia (Tarping)",
+          body: "Protecci\u00f3n temporal y r\u00e1pida para reducir la intrusi\u00f3n de agua mientras se programa su reparaci\u00f3n.",
+        },
+      ],
+    },
+    whyUs: {
+      heading: "Sepa qu\u00e9 est\u00e1 aprobando antes de que comience el trabajo",
+      body:
+        "Inspeccionamos el \u00e1rea afectada, fotografiamos lo que encontramos, explicamos las opciones de reparaci\u00f3n en lenguaje sencillo y entregamos un estimado por escrito antes de que usted decida.",
+      points: [
+        {
+          title: "Vea el problema con claridad",
+          body: [
+            { text: "Reciba fotos y una explicaci\u00f3n directa de d\u00f3nde proviene el da\u00f1o." },
+          ],
+        },
+        {
+          title: "Reciba una recomendaci\u00f3n honesta",
+          body: [
+            { text: "Si una reparaci\u00f3n puntual puede resolver el problema, se lo diremos. Si el da\u00f1o es m\u00e1s extenso, le explicaremos por qu\u00e9." },
+          ],
+        },
+        {
+          title: "Conozca el siguiente paso",
+          body: [
+            { text: "Entienda el trabajo recomendado y su costo antes de autorizar la reparaci\u00f3n." },
+          ],
+        },
+      ],
+      localTeamStatement:
+        "Trabaje con un equipo de techado licenciado en **Deerfield Beach**\u2014no con un centro de llamadas nacional que traspasa su solicitud a otra persona.",
+      proofImageAlt:
+        "Equipo de Weather Recovery Solutions realizando una inspecci\u00f3n de techo en el sitio en el sur de Florida.",
+      ctaLabel: "Solicitar Mi Inspecci\u00f3n de Techo",
+    },
+    contact: {
+      heading: "Obtenga respuestas claras sobre su techo",
+      subCopy:
+        "Cu\u00e9ntenos qu\u00e9 est\u00e1 notando y nuestro equipo le ayudar\u00e1 a determinar el siguiente paso adecuado.",
+      phonePrefix: "\u00bfPrefiere hablar con alguien? Llame al ",
+      phone: "(954) 999-6600",
+    },
+    faq: {
+      heading: "Preguntas sobre reparaci\u00f3n de techos de propietarios en Deerfield Beach",
+      items: [
+        {
+          question: "\u00bfC\u00f3mo s\u00e9 si necesito una reparaci\u00f3n o un reemplazo?",
+          answer:
+            "Inspeccionamos el \u00e1rea afectada y el techo circundante. Si una reparaci\u00f3n puntual es adecuada, la recomendaremos. Si el da\u00f1o es m\u00e1s extenso, le explicaremos por qu\u00e9 y le entregaremos las opciones disponibles por escrito.",
+        },
+        {
+          question: "\u00bfCu\u00e1nto costar\u00e1 la reparaci\u00f3n del techo?",
+          answer:
+            "El costo depende del tipo y extensi\u00f3n del da\u00f1o, el material del techo, el acceso al techo y cualquier requisito de c\u00f3digo aplicable. Recibir\u00e1 un **estimado por escrito** antes de aprobar la reparaci\u00f3n.",
+        },
+        {
+          question: "\u00bfPueden ayudar con una filtraci\u00f3n activa en el techo?",
+          answer:
+            "S\u00ed. Llame al **(954) 999-6600** para la respuesta m\u00e1s r\u00e1pida. Puede haber cobertura temporal (tarping) disponible para reducir la intrusi\u00f3n de agua mientras se programa una reparaci\u00f3n permanente.",
+        },
+      ],
+      ctaHeading: "\u00bfTiene m\u00e1s preguntas sobre su techo?",
+      ctaCallLabel: "Llame al (954) 999\u20136600",
+      ctaOrRequest: "o solicite su",
+      ctaFreeInspection: "inspecci\u00f3n gratuita en l\u00ednea.",
+    },
+    finalCta: {
+      heading: "Obtenga la Reparaci\u00f3n Correcta\u2014No una Recomendaci\u00f3n Apresurada",
+      body:
+        "Comience con una inspecci\u00f3n clara, fotos del da\u00f1o y un estimado por escrito de un equipo de techado local licenciado.",
+      callButton: "Llame al (954) 999-6600",
+      inspectionButton: "Solicitar Mi Inspecci\u00f3n de Techo",
+      note: "La mayor\u00eda de las inspecciones se programan dentro de 24\u201348 horas. Las emergencias tienen prioridad.",
+    },
+    links: {
+      replacementPrompt: "\u00bfNo est\u00e1 seguro si el da\u00f1o es demasiado extenso para reparar?",
+      replacementCta: "Conozca las opciones de reemplazo de techo en Deerfield Beach.",
+      emergencyPrompt: "\u00bfTiene una filtraci\u00f3n activa en este momento?",
+      emergencyCta: "Vea c\u00f3mo funciona nuestra respuesta de emergencia.",
+    },
+  },
 } as const;

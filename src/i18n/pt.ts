@@ -739,4 +739,131 @@ export const pt: Translations = {
       addressLine2: "Deerfield Beach, FL 33441",
     },
   },
+
+  /* \u2500\u2500\u2500 REPARO DE TELHADO \u2014 DEERFIELD BEACH (landing de servi\u00e7o+cidade) \u2500\u2500\u2500 */
+  roofRepairDeerfieldBeach: {
+    meta: {
+      title: "Reparo de Telhado em Deerfield Beach, FL | Weather Recovery Solutions",
+      description:
+        "Reparo de telhado local em Deerfield Beach. Receba uma inspe\u00e7\u00e3o clara, fotos do dano e uma recomenda\u00e7\u00e3o honesta por escrito\u2014sem press\u00e3o para substituir mais do que o necess\u00e1rio.",
+    },
+    hero: {
+      eyebrow: "Reparo de Telhado Local em Deerfield Beach",
+      headline: "Reparo de Telhado Sem Suposi\u00e7\u00f5es",
+      subCopy:
+        "Receba uma inspe\u00e7\u00e3o clara, fotos do que encontramos e uma recomenda\u00e7\u00e3o honesta\u2014sem press\u00e3o para substituir mais do que seu telhado realmente precisa.",
+      trustLine: "Licenciados na FL #CCC1328244 \u00b7 Totalmente Segurados \u00b7 Veteranos",
+      imageAlt:
+        "Weather Recovery Solutions realizando um reparo de precis\u00e3o em telhado de telhas em Deerfield Beach, Florida.",
+      ctaPrimary: "Ligue (954) 999-6600",
+      ctaPrimaryNote: "Fale diretamente com um especialista local em telhados\u2014sem centrais de atendimento.",
+      ctaSecondary: "Solicitar uma Inspe\u00e7\u00e3o de Telhado",
+    },
+    problems: {
+      heading: "Obtenha a solu\u00e7\u00e3o certa para o problema que voc\u00ea est\u00e1 vendo",
+      subheading:
+        "Localizamos a origem do dano, mostramos o que encontramos e recomendamos o reparo que seu telhado realmente precisa.",
+      items: [
+        {
+          title: "Vazamentos e Infiltra\u00e7\u00e3o de \u00c1gua",
+          body: "Encontramos a origem do vazamento\u2014n\u00e3o apenas onde a \u00e1gua ficou vis\u00edvel.",
+        },
+        {
+          title: "Telhas ou Tesouras Faltantes ou Danificadas",
+          body: "Reparamos materiais danificados antes que o vento e a chuva aumentem a abertura.",
+        },
+        {
+          title: "Telhas de Telhado Trincadas ou Deslocadas",
+          body: "Reparamos telhas danificadas ou deslocadas antes que a pr\u00f3xima tempestade piore o problema.",
+        },
+        {
+          title: "Problemas de Rufos e Ventila\u00e7\u00e3o",
+          body: "Cuidamos dos pontos comuns de entrada de \u00e1gua em juntas, ventila\u00e7\u00f5es e penetra\u00e7\u00f5es do telhado.",
+        },
+        {
+          title: "Danos por Tempestade e Vento",
+          body: "Entenda o que foi danificado e receba fotos do que encontramos.",
+        },
+        {
+          title: "Lonas de Emerg\u00eancia (Tarping)",
+          body: "Prote\u00e7\u00e3o tempor\u00e1ria e r\u00e1pida para reduzir a infiltra\u00e7\u00e3o de \u00e1gua enquanto seu reparo \u00e9 agendado.",
+        },
+      ],
+    },
+    whyUs: {
+      heading: "Saiba o que voc\u00ea est\u00e1 aprovando antes do in\u00edcio do trabalho",
+      body:
+        "Inspecionamos a \u00e1rea afetada, fotografamos o que encontramos, explicamos as op\u00e7\u00f5es de reparo em linguagem simples e entregamos um or\u00e7amento por escrito antes da sua decis\u00e3o.",
+      points: [
+        {
+          title: "Veja o problema com clareza",
+          body: [
+            { text: "Receba fotos e uma explica\u00e7\u00e3o direta sobre a origem do dano." },
+          ],
+        },
+        {
+          title: "Receba uma recomenda\u00e7\u00e3o honesta",
+          body: [
+            { text: "Se um reparo pontual puder resolver o problema, diremos isso. Se o dano for mais extenso, explicaremos o motivo." },
+          ],
+        },
+        {
+          title: "Saiba o pr\u00f3ximo passo",
+          body: [
+            { text: "Entenda o trabalho recomendado e o custo antes de autorizar o reparo." },
+          ],
+        },
+      ],
+      localTeamStatement:
+        "Trabalhe com uma equipe de telhados licenciada em **Deerfield Beach**\u2014n\u00e3o com uma central de atendimento nacional que passa sua solicita\u00e7\u00e3o para outra pessoa.",
+      proofImageAlt:
+        "Equipe da Weather Recovery Solutions realizando uma inspe\u00e7\u00e3o de telhado no local, no sul da Florida.",
+      ctaLabel: "Solicitar Minha Inspe\u00e7\u00e3o de Telhado",
+    },
+    contact: {
+      heading: "Obtenha respostas claras sobre seu telhado",
+      subCopy:
+        "Conte-nos o que voc\u00ea est\u00e1 notando, e nossa equipe ajudar\u00e1 a determinar o pr\u00f3ximo passo adequado.",
+      phonePrefix: "Prefere falar com algu\u00e9m? Ligue ",
+      phone: "(954) 999-6600",
+    },
+    faq: {
+      heading: "Perguntas sobre reparo de telhado de moradores de Deerfield Beach",
+      items: [
+        {
+          question: "Como sei se preciso de um reparo ou de uma substitui\u00e7\u00e3o?",
+          answer:
+            "Inspecionamos a \u00e1rea afetada e o telhado ao redor. Se um reparo pontual for adequado, o recomendaremos. Se o dano for mais extenso, explicaremos o motivo e forneceremos as op\u00e7\u00f5es dispon\u00edveis por escrito.",
+        },
+        {
+          question: "Quanto custar\u00e1 o reparo do telhado?",
+          answer:
+            "O custo depende do tipo e da extens\u00e3o do dano, do material do telhado, do acesso ao telhado e de quaisquer exig\u00eancias de c\u00f3digo aplic\u00e1veis. Voc\u00ea recebe um **or\u00e7amento por escrito** antes de aprovar o reparo.",
+        },
+        {
+          question: "Voc\u00eas ajudam com um vazamento ativo no telhado?",
+          answer:
+            "Sim. Ligue **(954) 999-6600** para a resposta mais r\u00e1pida. Pode haver lona de emerg\u00eancia (tarping) dispon\u00edvel para reduzir a infiltra\u00e7\u00e3o de \u00e1gua enquanto um reparo permanente \u00e9 agendado.",
+        },
+      ],
+      ctaHeading: "Tem mais perguntas sobre seu telhado?",
+      ctaCallLabel: "Ligue (954) 999\u20136600",
+      ctaOrRequest: "ou solicite sua",
+      ctaFreeInspection: "inspe\u00e7\u00e3o gratuita online.",
+    },
+    finalCta: {
+      heading: "Obtenha o Reparo Certo\u2014N\u00e3o uma Recomenda\u00e7\u00e3o Apressada",
+      body:
+        "Comece com uma inspe\u00e7\u00e3o clara, fotos do dano e um or\u00e7amento por escrito de uma equipe de telhados local licenciada.",
+      callButton: "Ligue (954) 999-6600",
+      inspectionButton: "Solicitar Minha Inspe\u00e7\u00e3o de Telhado",
+      note: "A maioria das inspe\u00e7\u00f5es \u00e9 agendada em 24\u201348 horas. Emerg\u00eancias t\u00eam prioridade.",
+    },
+    links: {
+      replacementPrompt: "N\u00e3o tem certeza se o dano \u00e9 grande demais para reparo?",
+      replacementCta: "Conhe\u00e7a as op\u00e7\u00f5es de substitui\u00e7\u00e3o de telhado em Deerfield Beach.",
+      emergencyPrompt: "Est\u00e1 com um vazamento ativo agora?",
+      emergencyCta: "Veja como funciona nossa resposta de emerg\u00eancia.",
+    },
+  },
 } as const;

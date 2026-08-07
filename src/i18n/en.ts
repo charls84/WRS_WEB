@@ -737,6 +737,133 @@ export const en = {
       addressLine2: "Deerfield Beach, FL 33441",
     },
   },
+
+  /* ─── ROOF REPAIR — DEERFIELD BEACH (service+city landing) ─── */
+  roofRepairDeerfieldBeach: {
+    meta: {
+      title: "Roof Repair in Deerfield Beach, FL | Weather Recovery Solutions",
+      description:
+        "Local roof repair in Deerfield Beach. Get a clear inspection, photos of the damage, and an honest written recommendation—no pressure to replace more than you need.",
+    },
+    hero: {
+      eyebrow: "Local Roof Repair in Deerfield Beach",
+      headline: "Roof Repair Without the Guesswork",
+      subCopy:
+        "Get a clear inspection, photos of what we find, and an honest recommendation—without pressure to replace more than your roof actually needs.",
+      trustLine: "Licensed FL #CCC1328244 · Fully Insured · Veteran-Owned",
+      imageAlt:
+        "Weather Recovery Solutions performing a precision tile roof repair in Deerfield Beach, Florida.",
+      ctaPrimary: "Call (954) 999-6600",
+      ctaPrimaryNote: "Speak directly with a local roofing expert—no call centers.",
+      ctaSecondary: "Request a Roof Inspection",
+    },
+    problems: {
+      heading: "Get the right fix for the problem you are seeing",
+      subheading:
+        "We locate the source of the damage, show you what we find, and recommend the repair your roof actually needs.",
+      items: [
+        {
+          title: "Roof Leaks & Water Intrusion",
+          body: "Find the source of the leak—not only where the water became visible.",
+        },
+        {
+          title: "Missing or Damaged Shingles",
+          body: "Repair damaged materials before wind and rain create a larger opening.",
+        },
+        {
+          title: "Cracked or Displaced Roof Tiles",
+          body: "Repair damaged or displaced tiles before the next storm makes it worse.",
+        },
+        {
+          title: "Flashing & Roof Vent Problems",
+          body: "Address common entry points around roof joints, vents, and penetrations.",
+        },
+        {
+          title: "Storm & Wind Damage",
+          body: "Understand what was damaged and receive photos of what we find.",
+        },
+        {
+          title: "Emergency Roof Tarping",
+          body: "Fast, temporary protection to reduce water intrusion while your repair is scheduled.",
+        },
+      ],
+    },
+    whyUs: {
+      heading: "Know what you are approving before work begins",
+      body:
+        "We inspect the affected area, photograph what we find, explain the repair options in plain language, and provide a written estimate before you make a decision.",
+      points: [
+        {
+          title: "See the problem clearly",
+          body: [
+            { text: "Get photos and a straightforward explanation of where the damage is coming from." },
+          ],
+        },
+        {
+          title: "Receive an honest recommendation",
+          body: [
+            { text: "If a targeted repair can solve the problem, we will tell you. If the damage is more extensive, we will explain why." },
+          ],
+        },
+        {
+          title: "Know the next step",
+          body: [
+            { text: "Understand the recommended work and cost before authorizing the repair." },
+          ],
+        },
+      ],
+      localTeamStatement:
+        "Work with a licensed **Deerfield Beach** roofing team—not a national call center passing your request to someone else.",
+      proofImageAlt:
+        "Weather Recovery Solutions team on-site conducting a roof inspection in South Florida.",
+      ctaLabel: "Request My Roof Inspection",
+    },
+    contact: {
+      heading: "Get clear answers about your roof",
+      subCopy:
+        "Tell us what you are noticing, and our team will help you determine the appropriate next step.",
+      phonePrefix: "Prefer to speak with someone? Call ",
+      phone: "(954) 999-6600",
+    },
+    faq: {
+      heading: "Roof repair questions from Deerfield Beach homeowners",
+      items: [
+        {
+          question: "How do I know whether I need a repair or a replacement?",
+          answer:
+            "We inspect the affected area and the surrounding roof. If a targeted repair is appropriate, we will recommend it. If the damage is more extensive, we will explain why and provide the available options in writing.",
+        },
+        {
+          question: "How much will the roof repair cost?",
+          answer:
+            "The cost depends on the type and extent of the damage, the roofing material, roof access, and any applicable code requirements. You receive a **written estimate** before approving the repair.",
+        },
+        {
+          question: "Can you help with an active roof leak?",
+          answer:
+            "Yes. Call **(954) 999-6600** for the fastest response. Temporary roof tarping may be available to help reduce additional water intrusion while a permanent repair is scheduled.",
+        },
+      ],
+      ctaHeading: "Have more questions about your roof?",
+      ctaCallLabel: "Call (954) 999–6600",
+      ctaOrRequest: "or request your",
+      ctaFreeInspection: "free inspection online.",
+    },
+    finalCta: {
+      heading: "Get the Right Repair—Not a Rushed Recommendation",
+      body:
+        "Start with a clear inspection, photos of the damage, and a written estimate from a licensed local roofing team.",
+      callButton: "Call (954) 999-6600",
+      inspectionButton: "Request My Roof Inspection",
+      note: "Most inspections are scheduled within 24–48 hours. Emergency issues are prioritized.",
+    },
+    links: {
+      replacementPrompt: "Not sure whether the damage is too extensive for repair?",
+      replacementCta: "Learn about roof replacement options in Deerfield Beach.",
+      emergencyPrompt: "Dealing with an active leak right now?",
+      emergencyCta: "See how our emergency response works.",
+    },
+  },
 };
 
 export type Translations = typeof en;

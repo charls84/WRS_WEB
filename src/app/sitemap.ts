@@ -26,6 +26,14 @@ const termsAlternates = {
   },
 };
 
+const roofRepairDeerfieldBeachAlternates = {
+  languages: {
+    en: `${SITE_URL}/roof-repair/deerfield-beach`,
+    es: `${SITE_URL}/es/roof-repair/deerfield-beach`,
+    pt: `${SITE_URL}/pt/roof-repair/deerfield-beach`,
+  },
+};
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return [
@@ -73,6 +81,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE_URL}/pt/terms-of-service`,
       lastModified: now,
       alternates: termsAlternates,
+    },
+    {
+      url: `${SITE_URL}/roof-repair/deerfield-beach`,
+      lastModified: now,
+      alternates: roofRepairDeerfieldBeachAlternates,
+    },
+    {
+      url: `${SITE_URL}/es/roof-repair/deerfield-beach`,
+      lastModified: now,
+      alternates: roofRepairDeerfieldBeachAlternates,
+    },
+    {
+      url: `${SITE_URL}/pt/roof-repair/deerfield-beach`,
+      lastModified: now,
+      alternates: roofRepairDeerfieldBeachAlternates,
     },
   ];
 }
