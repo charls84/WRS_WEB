@@ -139,11 +139,10 @@ export function RoofRepairDeerfieldBeachContent({
                     {page.hero.headline}
                   </h1>
                   <p className="body-regular text-[#001416]">{page.hero.subCopy}</p>
-                  {/* Trust signals — same list as home, minus 24/7 emergency response */}
+                  {/* Trust signals — same list as home, minus reviews (shown above via Google rating) and 24/7 emergency response */}
                   <ul aria-label="Business credentials" className="space-y-2 list-none p-0 m-0">
-                    {[0, 1, 2, 4].map((i) => {
-                      const item = t.hero.trust[i];
-                      const resolved = i === 0 ? pickByRating(reviewRating, item, t.hero.trustFirstGeneric) : item;
+                    {[1, 2, 4].map((i) => {
+                      const resolved = t.hero.trust[i];
                       const icon = HERO_TRUST_ICONS[i];
                       return (
                         <li key={i}>
