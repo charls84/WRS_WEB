@@ -24,6 +24,13 @@
   --chart-baseline: var(--stone);
   --chart-fill: rgba(26, 26, 27, 0.06);
 
+  /* Status colors for indicators only (better / worse / no change). Not accents:
+     orange stays the brand accent. Each holds 4.5:1 for 12px text. */
+  --positive: #1f7a4d;
+  --on-positive: var(--bone);
+  --negative: #c0262d;
+  --neutral: var(--stone);
+
   --space-8: 8px;
   --space-16: 16px;
   --space-24: 24px;
@@ -44,6 +51,10 @@
     --border: var(--stone);
     --chart-baseline: #b5b0ab;
     --chart-fill: rgba(245, 242, 237, 0.08);
+    --positive: #4cc287;
+    --on-positive: var(--ink);
+    --negative: #ff7a73;
+    --neutral: #b5b0ab;
     color-scheme: dark;
   }
 }
@@ -446,19 +457,36 @@ a {
   white-space: nowrap;
 }
 
+/* Better = filled green, worse = outlined red, no change = outlined grey.
+   Fill vs outline keeps them apart for color-blind readers too. */
 .delta--good {
-  background: var(--text);
-  color: var(--surface);
+  background: var(--positive);
+  border-color: var(--positive);
+  color: var(--on-positive);
 }
 
 .delta--bad {
-  border-color: var(--accent);
-  color: var(--text);
+  border-color: var(--negative);
+  color: var(--negative);
+  font-weight: 700;
 }
 
 .delta--flat {
-  border-color: var(--border);
+  border-color: var(--neutral);
   color: var(--text-muted);
+}
+
+.status-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-8) var(--space-16);
+}
+
+.status-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
 }
 
 /* ─── KPI tiles ─── */
@@ -637,16 +665,18 @@ table.data td:first-child {
 }
 
 .mark--ok {
-  background: var(--text);
-  color: var(--surface);
+  background: var(--positive);
+  border-color: var(--positive);
+  color: var(--on-positive);
 }
 
 .mark--fail {
-  border-color: var(--accent);
+  border-color: var(--negative);
+  color: var(--negative);
 }
 
 .mark--unknown {
-  border-color: var(--border);
+  border-color: var(--neutral);
   color: var(--text-muted);
 }
 

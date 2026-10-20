@@ -95,6 +95,17 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ w
                 Each row compares the same number of days before DXW and now. A question mark means the source is not connected yet or has no data
                 that far back. Nothing here is estimated.
               </p>
+              <div className="status-legend label">
+                <span>
+                  <span className="delta delta--good">▲ +12%</span> Better
+                </span>
+                <span>
+                  <span className="delta delta--bad">▼ −12%</span> Worse
+                </span>
+                <span>
+                  <span className="delta delta--flat">■ ±0%</span> No change (under 1%)
+                </span>
+              </div>
             </div>
           </div>
           <Scorecard areas={data.areas} />

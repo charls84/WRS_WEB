@@ -26,6 +26,25 @@ export function unitSuffix(unit: Unit): string {
   return "";
 }
 
+/** Changes this small read as "no change" (grey) rather than better or worse. */
+function isFlat(unit: Unit, base: number, diff: number): boolean {
+  const abs = Math.abs(diff);
+  switch (unit) {
+    case "percent":
+      return abs < 0.001; // under 0.1 points
+    case "score":
+      return abs < 1;
+    case "rating":
+      return abs < 0.05;
+    case "position":
+      return abs < 0.1;
+    case "seconds":
+      return abs < 0.05;
+    default:
+      return base === 0 ? abs === 0 : abs / base < 0.01; // under 1%
+  }
+}
+
 export interface Delta {
   text: string;
   direction: "up" | "down" | "flat";
@@ -38,7 +57,7 @@ export function delta(m: Metric): Delta | null {
   const a = m.baseline.value;
   const b = m.current.value;
   const diff = b - a;
-  const direction = Math.abs(diff) < 1e-9 ? "flat" : diff > 0 ? "up" : "down";
+  const direction = isFlat(m.unit, a, diff) ? "flat" : diff > 0 ? "up" : "down";
   const improved = direction === "flat" ? null : (direction === "up") === (m.better === "up");
   const sign = diff > 0 ? "+" : diff < 0 ? "−" : "±";
   const abs = Math.abs(diff);
