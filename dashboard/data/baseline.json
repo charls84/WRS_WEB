@@ -1,6 +1,6 @@
 {
   "_readme": "Edit this file to set the baseline. baselineStart is the first day of the earliest reliable period before DXW work. Manual figures fill gaps that no API can return (data older than the source keeps, or sources that did not exist yet). Leave value null when unknown: the dashboard shows it as missing instead of guessing.",
-  "baselineStart": null,
+  "baselineStart": "2026-05-01",
   "dxwStart": null,
   "brandTerms": ["weather recovery", "weatherrecovery", "wrs"],
   "areas": {

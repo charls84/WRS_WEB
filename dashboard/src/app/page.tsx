@@ -64,6 +64,15 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ w
               ))}
             </nav>
           </div>
+          {data.window.overlapDays > 0 && (
+            <div className="notice">
+              <span className="label">Windows overlap</span>
+              <p>
+                The baseline and current windows share {data.window.overlapDays} days, so this view understates the change. Use a shorter window
+                for a clean before-and-after.
+              </p>
+            </div>
+          )}
           {data.window.baselineIsFallback && (
             <div className="notice">
               <span className="label">Baseline date not set</span>

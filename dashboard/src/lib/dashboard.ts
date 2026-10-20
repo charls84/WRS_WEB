@@ -1,7 +1,7 @@
 import "server-only";
 import { unstable_cache } from "next/cache";
 import { baselineConfig, baselineStart, env, sampleMode, type WindowDays } from "./config";
-import { baselineRange, currentRange, formatRange, todayIso, type Range } from "./periods";
+import { baselineRange, currentRange, daysBetween, formatRange, todayIso, type Range } from "./periods";
 import { applySample } from "./sample";
 import { readSnapshots } from "./snapshots";
 import { buildGa4Section, fetchGa4, ga4Status, ga4Unavailable } from "./sources/ga4";
@@ -122,7 +122,13 @@ export async function getDashboard(days: WindowDays): Promise<Dashboard> {
   return {
     generatedAt: new Date().toISOString(),
     sample,
-    window: { days, baseline: baseRange, current: cur(1), baselineIsFallback: base.fallback },
+    window: {
+      days,
+      baseline: baseRange,
+      current: cur(1),
+      baselineIsFallback: base.fallback,
+      overlapDays: Math.max(0, daysBetween(cur(1).start, baseRange.end) + 1),
+    },
     areas: buildAreas(sections),
     sections,
   };

@@ -108,6 +108,8 @@ export interface Window {
   baseline: { start: string; end: string };
   current: { start: string; end: string };
   baselineIsFallback: boolean;
+  /** Baseline and current windows share days, so the comparison understates change. */
+  overlapDays: number;
 }
 
 export interface Dashboard {
