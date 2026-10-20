@@ -1,0 +1,65 @@
+{
+  "_readme": "Edit this file to set the baseline. baselineStart is the first day of the earliest reliable period before DXW work. Manual figures fill gaps that no API can return (data older than the source keeps, or sources that did not exist yet). Leave value null when unknown: the dashboard shows it as missing instead of guessing.",
+  "baselineStart": null,
+  "dxwStart": null,
+  "brandTerms": ["weather recovery", "weatherrecovery", "wrs"],
+  "areas": {
+    "search": {
+      "area": "Search visibility",
+      "changed": "SEO, Google Search Console and service-page strategy",
+      "meaning": "More potential customers can discover WRS",
+      "before": null,
+      "current": null
+    },
+    "website": {
+      "area": "Website",
+      "changed": "Landing page, service pages, UX and calls to action",
+      "meaning": "Easier for a homeowner to take action",
+      "before": null,
+      "current": null
+    },
+    "leads": {
+      "area": "Leads",
+      "changed": "Forms and conversion tracking",
+      "meaning": "WRS can measure lead generation",
+      "before": null,
+      "current": null
+    },
+    "reputation": {
+      "area": "Reputation",
+      "changed": "Google Business Profile and review process",
+      "meaning": "Greater local trust",
+      "before": null,
+      "current": null
+    },
+    "measurement": {
+      "area": "Measurement",
+      "changed": "GA4, Search Console and Google Tag Manager",
+      "meaning": "Decisions can use actual data",
+      "before": "Almost none (to confirm)",
+      "current": null
+    },
+    "followup": {
+      "area": "Follow-up",
+      "changed": "JobNimbus connections",
+      "meaning": "Leads and customer relationships are less likely to disappear",
+      "before": null,
+      "current": null
+    }
+  },
+  "manual": {
+    "reviews.count": { "value": null, "date": null, "source": "" },
+    "reviews.rating": { "value": null, "date": null, "source": "" },
+    "pagespeed.mobile": { "value": null, "date": null, "source": "" },
+    "gbp.calls": { "value": null, "date": null, "source": "" },
+    "gbp.websiteClicks": { "value": null, "date": null, "source": "" },
+    "gbp.directions": { "value": null, "date": null, "source": "" },
+    "gbp.impressions": { "value": null, "date": null, "source": "" },
+    "jobnimbus.leads": { "value": null, "date": null, "source": "" },
+    "gsc.impressions": { "value": null, "date": null, "source": "" },
+    "gsc.clicks": { "value": null, "date": null, "source": "" },
+    "ga4.sessions": { "value": null, "date": null, "source": "" },
+    "ga4.leads": { "value": null, "date": null, "source": "" },
+    "ga4.phoneClicks": { "value": null, "date": null, "source": "" }
+  }
+}

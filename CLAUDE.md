@@ -8,6 +8,10 @@
 - Main implementation is currently a single-page experience composed in `src/app/page.tsx` and section components in `src/components/PageSections.tsx`.
 - **Deployed site:** https://weather-recovery-solutions.vercel.app/
 
+## WRS Growth Dashboard (`dashboard/`)
+- Separate Next.js app (own `package.json`, port 3100) for the DOUX.WORK baseline-to-today client dashboard. Uses the DOUX.WORK design system, not the WRS site's Figma tokens.
+- Excluded from the site's `tsconfig.json` and ESLint config; run its checks from inside `dashboard/`. See `dashboard/README.md`.
+
 ## Canonical design sources
 - Main Figma design:
   - https://www.figma.com/design/YqsrliBvDTtVXbh3Wx4FbX/Weather-Recovery-Solutions?node-id=551-11792&m=dev
