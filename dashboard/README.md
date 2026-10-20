@@ -4,6 +4,8 @@ Baseline-to-today dashboard for Weather Recovery Solutions, built with the DOUX.
 
 It answers one table: for each area (search visibility, website, leads, reputation, measurement, follow-up), what it looked like before DXW, what we changed, where it is now, and what that means for the business. Every number comes from a source; anything without a source shows `?` and says why.
 
+Step-by-step connection guide (Spanish): [SETUP.md](SETUP.md).
+
 ## Run locally
 
 ```bash
